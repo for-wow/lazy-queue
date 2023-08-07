@@ -66,11 +66,11 @@ do
 	label:SetText('AB')
 	
 	checkbox = CreateFrame('CheckButton', nil, UI, 'UICheckButtonTemplate')
-	UI.checkboxAV = checkbox
+	UI.checkboxAC = checkbox
 	checkbox:SetPoint('RIGHT', -30, 2)
 	
 	checkbox:SetScript('OnClick', function()
-		_G.LazyQueueDB.AV = this:GetChecked()
+		_G.LazyQueueDB.AC = this:GetChecked()
 	end)
 	
 	label = checkbox:CreateFontString(nil, nil, 'GameFontNormalSmall')
@@ -84,5 +84,5 @@ function UI.Load()
 	UI.checkboxEnabled:SetChecked(_G.LazyQueueDB.enabled)
 	UI.checkboxWSG:SetChecked(_G.LazyQueueDB.WSG)
 	UI.checkboxAB:SetChecked(_G.LazyQueueDB.AB)
-	UI.checkboxAV:SetChecked(_G.LazyQueueDB.AV)
+	UI.checkboxAC:SetChecked(_G.LazyQueueDB.AC)
 end
