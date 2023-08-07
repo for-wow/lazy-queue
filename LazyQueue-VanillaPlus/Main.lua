@@ -28,7 +28,11 @@ function frame:ADDON_LOADED()
 	if arg1 ~= 'LazyQueue-VanillaPlus' then
 		return
 	end
-
+    
+	if not _G.LazyQueueDB then
+		_G.LazyQueueDB = {}
+	end
+    
 	LazyQueue.UI.Load()
 	
 	if not _G.LazyQueueDB.enabled then
