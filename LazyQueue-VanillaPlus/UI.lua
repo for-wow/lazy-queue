@@ -1,6 +1,5 @@
 local _G = getfenv()
 local LazyQueue = _G.LazyQueue
-local L = LazyQueue.Locales[_G.GetLocale()].Strings
 
 local UI = CreateFrame('Frame', nil, _G.HonorFrame)
 LazyQueue.UI = UI
@@ -30,7 +29,7 @@ do
 	checkboxEnabled.label = label
 	label:SetJustifyH('LEFT')
 	label:SetPoint('LEFT', checkboxEnabled, 'RIGHT', 0, 0)
-	label:SetText(L['Queue'])
+	label:SetText('Queue')
 end
 
 do
@@ -49,7 +48,7 @@ do
 	checkbox.label = label
 	label:SetJustifyH('LEFT')
 	label:SetPoint('LEFT', checkbox, 'RIGHT', 0, 0)
-	label:SetText(L['WSG'])
+	label:SetText('WSG')
 	
 	
 	checkbox = CreateFrame('CheckButton', nil, UI, 'UICheckButtonTemplate')
@@ -64,7 +63,7 @@ do
 	checkbox.label = label
 	label:SetJustifyH('LEFT')
 	label:SetPoint('LEFT', checkbox, 'RIGHT', 0, 0)
-	label:SetText(L['AB'])
+	label:SetText('AB')
 	
 	checkbox = CreateFrame('CheckButton', nil, UI, 'UICheckButtonTemplate')
 	UI.checkboxAV = checkbox
@@ -78,7 +77,7 @@ do
 	checkbox.label = label
 	label:SetJustifyH('LEFT')
 	label:SetPoint('LEFT', checkbox, 'RIGHT', 0, 0)
-	label:SetText(L['AV'])
+	label:SetText('AC')
 end
 
 function UI.Load()
