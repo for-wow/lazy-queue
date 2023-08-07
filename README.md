@@ -3,7 +3,7 @@
 ![Addon screenshot #1](IMG_1.png)
 
 ### Description:
-LazyQueue addon adapted for VanillaPlus server.
+Automatically enqueues player for selected battleground. LazyQueue addon adapted for VanillaPlus server.
 
 Original addon: https://github.com/yutsuku/LazyQueue
 
