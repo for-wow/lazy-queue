@@ -57,14 +57,21 @@ do
 	label:SetJustifyH('LEFT')
 	label:SetPoint('LEFT', checkbox, 'RIGHT', 0, 0)
 	label:SetText('WSG')
-	
-	
+
 	checkbox = CreateFrame('CheckButton', nil, UI, 'UICheckButtonTemplate')
 	UI.checkboxAB = checkbox
 	checkbox:SetPoint('RIGHT', -80, 2)
 	
 	checkbox:SetScript('OnClick', function()
 		_G.LazyQueueDB.AB = this:GetChecked()
+	end)
+    checkbox:SetScript('OnEnter', function()
+        GameTooltip:SetOwner(this, 'ANCHOR_CURSOR')
+        GameTooltip:SetText('Arathi Basin')
+        GameTooltip:Show()
+	end)
+	checkbox:SetScript('OnLeave', function()
+        GameTooltip:Hide()
 	end)
 	
 	label = checkbox:CreateFontString(nil, nil, 'GameFontNormalSmall')
@@ -79,6 +86,14 @@ do
 	
 	checkbox:SetScript('OnClick', function()
 		_G.LazyQueueDB.AC = this:GetChecked()
+	end)
+    checkbox:SetScript('OnEnter', function()
+        GameTooltip:SetOwner(this, 'ANCHOR_CURSOR')
+        GameTooltip:SetText('Azshara Crater')
+        GameTooltip:Show()
+	end)
+	checkbox:SetScript('OnLeave', function()
+        GameTooltip:Hide()
 	end)
 	
 	label = checkbox:CreateFontString(nil, nil, 'GameFontNormalSmall')
