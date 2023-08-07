@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: LazyQueue-VanillaPlus
-## Author: moh
-## Version: 1.2
+## Author: moh (original author), Wayborn
+## Version: 1.0
 ## SavedVariablesPerCharacter: LazyQueueDB
 
 Global.lua
