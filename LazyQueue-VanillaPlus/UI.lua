@@ -43,6 +43,14 @@ do
 	checkbox:SetScript('OnClick', function()
 		_G.LazyQueueDB.WSG = this:GetChecked()
 	end)
+	checkbox:SetScript('OnEnter', function()
+        GameTooltip:SetOwner(this, 'ANCHOR_CURSOR')
+        GameTooltip:SetText('Warsong Gulch')
+        GameTooltip:Show()
+	end)
+	checkbox:SetScript('OnLeave', function()
+        GameTooltip:Hide()
+	end)
 	
 	label = checkbox:CreateFontString(nil, nil, 'GameFontNormalSmall')
 	checkbox.label = label
