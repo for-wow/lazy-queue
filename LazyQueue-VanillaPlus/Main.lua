@@ -1,6 +1,5 @@
 local _G = getfenv()
 local LazyQueue = _G.LazyQueue
-local L = LazyQueue.Locales[_G.GetLocale()].Strings
 
 local frame = CreateFrame('Frame')
 LazyQueue.frame = frame
@@ -15,13 +14,13 @@ frame:RegisterEvent('ZONE_CHANGED_NEW_AREA')
 
 function LazyQueue.Join()
 	if _G.LazyQueueDB.WSG then
-		SendChatMessage(_G.LazyQueueDB.Commands.WSG, 'SAY')
+		SendChatMessage('.wsg')
 	end
 	if _G.LazyQueueDB.AB then
-		SendChatMessage(_G.LazyQueueDB.Commands.AB, 'SAY')
+        SendChatMessage('.ab')
 	end
-	if _G.LazyQueueDB.AV then
-		SendChatMessage(_G.LazyQueueDB.Commands.AV, 'SAY')
+	if _G.LazyQueueDB.AC then
+		SendChatMessage('.ac')
 	end
 end
 
@@ -30,16 +29,6 @@ function frame:ADDON_LOADED()
 		return
 	end
 
-	if not _G.LazyQueueDB then
-		_G.LazyQueueDB = {
-			['Commands'] = {
-				['WSG'] = '.join wsg',
-				['AB'] = '.join ab',
-				['AV'] = '.join av',
-			}
-		}
-	end
-	
 	LazyQueue.UI.Load()
 	
 	if not _G.LazyQueueDB.enabled then
@@ -48,7 +37,7 @@ function frame:ADDON_LOADED()
 	
 	-- don't attempt to queue from bg!
 	local zone = _G.GetRealZoneText()
-	if zone ~= L['Warsong Gulch'] and zone ~= L['Arathi Basin'] and zone ~= L['Alterac Valley'] then
+	if zone ~= 'Warsong Gulch' and zone ~= 'Arathi Basin' and zone ~= 'Azshara Crater' then
 		LazyQueue.Join()
 	end
 end
@@ -60,7 +49,7 @@ function frame:ZONE_CHANGED_NEW_AREA()
 	
 	-- don't attempt to queue from bg!
 	local zone = _G.GetRealZoneText()
-	if zone ~= L['Warsong Gulch'] and zone ~= L['Arathi Basin'] and zone ~= L['Alterac Valley'] then
+	if zone ~= 'Warsong Gulch' and zone ~= 'Arathi Basin' and zone ~= 'Azshara Crater' then
 		LazyQueue.Join()
 	end
 end
@@ -74,13 +63,13 @@ function frame:BATTLEFIELDS_SHOW()
 		asGroup = 1
 	end
 	
-	if _G.LazyQueueDB.WSG and bg == L['Warsong Gulch'] then
+	if _G.LazyQueueDB.WSG and bg == 'Warsong Gulch' then
 		JoinBattlefield(0, asGroup)
 		_G.BattlefieldFrameCancelButton:Click()
-	elseif _G.LazyQueueDB.AB and bg == L['Arathi Basin'] then
+	elseif _G.LazyQueueDB.AB and bg == 'Arathi Basin' then
 		JoinBattlefield(0, asGroup)
 		_G.BattlefieldFrameCancelButton:Click()
-	elseif _G.LazyQueueDB.AV and bg == L['Alterac Valley'] then
+	elseif _G.LazyQueueDB.AC and bg == 'Azshara Crater' then
 		JoinBattlefield(0, asGroup)
 		_G.BattlefieldFrameCancelButton:Click()
 	end
