@@ -26,7 +26,7 @@ function LazyQueue.Join()
 end
 
 function frame:ADDON_LOADED()
-	if arg1 ~= 'LazyQueue' then
+	if arg1 ~= 'LazyQueue-VanillaPlus' then
 		return
 	end
 
