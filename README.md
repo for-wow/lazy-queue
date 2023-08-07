@@ -3,7 +3,7 @@
 ![Addon screenshot #1](IMG_1.png)
 
 ### Description:
-Automatically enqueues player for selected battleground. LazyQueue addon adapted for VanillaPlus server.
+Automatically enqueues player for selected battleground. To access the addon, you need to open the `Honor` tab in the `Character Info` frame. LazyQueue addon adapted for VanillaPlus server.
 
 Original addon: https://github.com/yutsuku/LazyQueue
 
