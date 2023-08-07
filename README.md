@@ -16,4 +16,4 @@ Original addon: https://github.com/yutsuku/LazyQueue
 ### Installation:
 1. [Download](https://github.com/for-wow/lazy-queue-vanillaplus/archive/refs/heads/main.zip) the current version of the source code
 2. Open folder in the archive
-3. Copy folder "LazyQueue-VanillaPlus" to addons folder (WOW\Interface\AddOns\)
+3. Copy folder `LazyQueue-VanillaPlus` to addons folder: `WOW \ Interface \ AddOns \`
