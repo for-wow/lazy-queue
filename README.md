@@ -12,6 +12,7 @@ Original addon: https://github.com/yutsuku/LazyQueue
 * Added command to register for custom battleground Azshara Crater
 * Removed Chinese language support
 * Added tooltips with battleground names for checkboxes
+* Do not queue during the flight (v1.1)
 
 ### Installation:
 1. [Download](https://github.com/for-wow/lazy-queue-vanillaplus/archive/refs/heads/main.zip) the current version of the source code
