@@ -50,6 +50,10 @@ function frame:ZONE_CHANGED_NEW_AREA()
 	if not _G.LazyQueueDB.enabled then
 		return
 	end
+
+    if UnitOnTaxi('player') then
+        return
+    end
 	
 	-- don't attempt to queue from bg!
 	local zone = _G.GetRealZoneText()
